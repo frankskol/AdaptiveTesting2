@@ -95,9 +95,10 @@ public class DefaultView extends UI {
 		String defaultValue = "-- Bitte auswählen --";
 		String test1 = TestVariants.RW.toString();
 		String test2 = TestVariants.SQL.toString();
+		String test3 = TestVariants.GEOGEBRA.toString();
 
 		ComboBox box = new ComboBox("Testauswahl");
-		box.addItems(defaultValue, test1, test2);
+		box.addItems(defaultValue, test1, test2, test3);
 		box.addValueChangeListener(new Property.ValueChangeListener() {
 
 			boolean testSelected = false;

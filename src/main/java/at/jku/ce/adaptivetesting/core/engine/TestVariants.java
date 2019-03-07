@@ -5,7 +5,8 @@ package at.jku.ce.adaptivetesting.core.engine;
  */
 
 public enum TestVariants {
-	RW("Rechnungswesentest", "accounting"), SQL("SQL-Datenmodellierungstest", "datamod");
+	RW("Rechnungswesentest", "accounting"), SQL("SQL-Datenmodellierungstest", "datamod"),
+	GEOGEBRA("Geogebra Test", "geogebra");
 	private String name, folderName;
 
 	TestVariants(String name, String folderName) {
