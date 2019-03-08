@@ -19,6 +19,7 @@ import at.jku.ce.adaptivetesting.views.test.*;
 import at.jku.ce.adaptivetesting.views.test.adm.*;
 import at.jku.ce.adaptivetesting.views.test.accounting.*;
 import at.jku.ce.adaptivetesting.views.test.datamod.*;
+import at.jku.ce.adaptivetesting.views.test.geogebra.*;
 import com.vaadin.annotations.PreserveOnRefresh;
 import com.vaadin.annotations.Theme;
 import com.vaadin.annotations.Title;
@@ -123,7 +124,15 @@ public class DefaultView extends UI {
 					testSelected = true;
 					start.setEnabled(true);
 
-				} else if (event.getProperty().getValue().equals(defaultValue)) {
+				} else if (event.getProperty().getValue().equals(test3)) {
+
+					manager = new GeogebraTestView(test3);
+					testTypeFolder = TestVariants.GEOGEBRA.getFolderName();
+					testSelected = true;
+					start.setEnabled(true);
+
+				}
+				else if (event.getProperty().getValue().equals(defaultValue)) {
 					start.setEnabled(false);
 				}
 				if (testSelected) {
