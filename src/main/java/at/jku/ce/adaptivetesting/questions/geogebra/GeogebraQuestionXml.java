@@ -9,23 +9,23 @@ import at.jku.ce.adaptivetesting.questions.accounting.AccountingDataStorage;
 
 import javax.xml.bind.annotation.XmlRootElement;
 
-@XmlRootElement(name = "accountingtQuestionDataStorage") //todo: fix spelling of root element - needs to be fixed in all XML files
+@XmlRootElement(name = "GeogebraQuestionDataStorage") //todo: fix spelling of root element - needs to be fixed in all XML files
 public class GeogebraQuestionXml extends
-		XmlQuestionData<AccountingDataStorage> {
+		XmlQuestionData<GeogebraDataStorage> {
 
 	private static final long serialVersionUID = 3262285204313858210L;
 
 	public GeogebraQuestionXml() {
 	}
 
-	public GeogebraQuestionXml(AccountingDataStorage solution,
+	public GeogebraQuestionXml(GeogebraDataStorage solution,
                                String questionText, float difficulty) {
 		super(solution, questionText, difficulty);
 	}
 
 	@Override
-	public Class<AccountingDataStorage> getDataStorageClass() {
-		return AccountingDataStorage.class;
+	public Class<GeogebraDataStorage> getDataStorageClass() {
+		return GeogebraDataStorage.class;
 	}
 
 }
