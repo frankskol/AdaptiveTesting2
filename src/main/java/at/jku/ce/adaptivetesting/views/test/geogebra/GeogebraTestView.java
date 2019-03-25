@@ -56,12 +56,6 @@ public class GeogebraTestView extends TestView {
 
 		layout.setSizeFull();
 
-		Image image = new Image("",
-				new FileResource(new File(imageFolder + "Personalverrechnungstabelle.jpg")));
-		image.setWidth("80%");
-		layout.addComponent(image);
-		layout.setComponentAlignment(image, Alignment.MIDDLE_CENTER);
-
 		layout.setHeight(null);
 		return layout;
 	}
@@ -148,7 +142,6 @@ public class GeogebraTestView extends TestView {
 
 	@Override
 	public void loadQuestions() {
-		ConnectionProvider.initialize();
 		try {
 			QuestionProvider.initialize();
 

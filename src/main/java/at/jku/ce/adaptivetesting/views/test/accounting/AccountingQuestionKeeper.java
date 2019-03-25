@@ -150,7 +150,6 @@ public class AccountingQuestionKeeper {
                 .isFile()
                 && (f.canRead() || f.setReadable(true))
                 && f.getName().endsWith(".xml"));
-
         // read all questions
         LogHelper.logInfo("Found " + questions.length + " potential question(s)");
         int successfullyLoaded = 0;

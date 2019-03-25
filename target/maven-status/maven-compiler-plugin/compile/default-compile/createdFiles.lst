@@ -4,6 +4,7 @@ at\jku\ce\adaptivetesting\questions\accounting\MultiAccountingDataStorage.class
 at\jku\ce\adaptivetesting\questions\accounting\MultipleTaskTableQuestion.class
 at\jku\ce\adaptivetesting\views\test\accounting\misc\AccountingRecordInputGrid$Side.class
 at\jku\ce\adaptivetesting\core\engine\TestVariants.class
+at\jku\ce\adaptivetesting\views\test\geogebra\GeogebraQuestionKeeperProvider.class
 at\jku\ce\adaptivetesting\views\def\DefaultView.class
 at\jku\ce\adaptivetesting\questions\datamod\SqlDataStorage$1.class
 at\jku\ce\adaptivetesting\views\def\DefaultView$2.class
@@ -13,6 +14,7 @@ at\jku\ce\adaptivetesting\views\test\adm\AdminView$UploadUI$1.class
 at\jku\ce\adaptivetesting\questions\accounting\MultiAccountingQuestionXml.class
 at\jku\ce\adaptivetesting\core\LogHelper.class
 at\jku\ce\adaptivetesting\views\test\datamod\DatamodResultView.class
+at\jku\ce\adaptivetesting\questions\geogebra\GeogebraQuestion.class
 at\jku\ce\adaptivetesting\core\r\RConnectionProvider.class
 at\jku\ce\adaptivetesting\views\test\adm\ResultsDownloadView$ZIPFileUI$1.class
 at\jku\ce\adaptivetesting\views\test\adm\AdminView$QuestionPreviewUI.class
@@ -32,6 +34,7 @@ at\jku\ce\adaptivetesting\questions\accounting\MultipleChoiceQuestionXml.class
 at\jku\ce\adaptivetesting\views\test\adm\AdminView$1$1.class
 at\jku\ce\adaptivetesting\questions\accounting\OpenAnswerKeywordQuestionXml.class
 at\jku\ce\adaptivetesting\views\html\HtmlLabel.class
+at\jku\ce\adaptivetesting\questions\geogebra\GeogebraDataStorage.class
 at\jku\ce\adaptivetesting\views\def\DefaultViewFooter$3.class
 at\jku\ce\adaptivetesting\questions\accounting\test\AccountingMockQuestion.class
 at\jku\ce\adaptivetesting\views\def\DefaultView$1.class
@@ -63,17 +66,20 @@ at\jku\ce\adaptivetesting\core\db\ConnectionProvider.class
 at\jku\ce\adaptivetesting\views\test\TestView.class
 at\jku\ce\adaptivetesting\views\def\MenuWindow.class
 at\jku\ce\adaptivetesting\core\IResultView.class
+at\jku\ce\adaptivetesting\views\test\geogebra\GeogebraTestView.class
 at\jku\ce\adaptivetesting\core\AnswerStorage.class
 at\jku\ce\adaptivetesting\views\SingleComponentLayout.class
 at\jku\ce\adaptivetesting\views\test\accounting\AccountingQuestionKeeperProvider.class
 at\jku\ce\adaptivetesting\views\test\adm\ResultsDownloadView$ZIPFileUI.class
 at\jku\ce\adaptivetesting\views\test\datamod\TableWindow.class
 at\jku\ce\adaptivetesting\questions\accounting\AccountingQuestion.class
+at\jku\ce\adaptivetesting\questions\geogebra\GeogebraQuestionXml.class
 at\jku\ce\adaptivetesting\core\IQuestion.class
 at\jku\ce\adaptivetesting\views\def\DefaultView$3.class
 at\jku\ce\adaptivetesting\views\test\datamod\DatamodQuestionKeeperProvider.class
 at\jku\ce\adaptivetesting\questions\accounting\util\AccountRecordData.class
 at\jku\ce\adaptivetesting\views\def\DefaultViewFooter$1$1.class
+at\jku\ce\adaptivetesting\views\test\geogebra\GeogebraResultView.class
 at\jku\ce\adaptivetesting\questions\accounting\ProfitDataStorage.class
 at\jku\ce\adaptivetesting\views\test\accounting\AccountingQuestionKeeper.class
 at\jku\ce\adaptivetesting\views\test\datamod\DatamodQuestionKeeper.class
@@ -98,5 +104,6 @@ at\jku\ce\adaptivetesting\questions\datamod\util\DatamodXmlHelper.class
 at\jku\ce\adaptivetesting\views\MockQuestion.class
 at\jku\ce\adaptivetesting\questions\accounting\MultipleTaskTableDataStorage.class
 at\jku\ce\adaptivetesting\views\test\adm\ResultsDownloadView$1.class
+at\jku\ce\adaptivetesting\views\test\geogebra\GeogebraQuestionKeeper.class
 at\jku\ce\adaptivetesting\core\engine\StudentData.class
 at\jku\ce\adaptivetesting\questions\accounting\ProfitQuestionXml.class

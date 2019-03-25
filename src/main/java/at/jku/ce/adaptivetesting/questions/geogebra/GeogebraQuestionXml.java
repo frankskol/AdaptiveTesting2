@@ -9,7 +9,7 @@ import at.jku.ce.adaptivetesting.questions.accounting.AccountingDataStorage;
 
 import javax.xml.bind.annotation.XmlRootElement;
 
-@XmlRootElement(name = "GeogebraQuestionDataStorage") //todo: fix spelling of root element - needs to be fixed in all XML files
+@XmlRootElement(name = "geogebraQuestionDataStorage") //todo: fix spelling of root element - needs to be fixed in all XML files
 public class GeogebraQuestionXml extends
 		XmlQuestionData<GeogebraDataStorage> {
 

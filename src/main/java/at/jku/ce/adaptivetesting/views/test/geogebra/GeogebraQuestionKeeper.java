@@ -106,7 +106,6 @@ public class GeogebraQuestionKeeper {
             case 0:
                 notificationCaption = "Ladevorgang fehlgeschlagen";
                 notificationDescription = "Es wurden keine ladbaren Items gefunden";
-                ConnectionProvider.closeConnection();
                 break;
             case 1:
                 notificationCaption = "Ladevorgang abgeschlossen";

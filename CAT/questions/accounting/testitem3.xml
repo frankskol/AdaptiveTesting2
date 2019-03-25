@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<profitQuestionDataStorage>
+	<dataStorage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="profitDataStorage">
+		<answer>Increase</answer>
+	</dataStorage>
+	<question>&lt;br /&gt;Ihrem Unternehmen werden Zinsertr&#xE4;ge f&#xFC;r das Bankguthaben auf Ihrem Bankkonto gutgeschrieben: &#x20AC; 24,60.&lt;br /&gt;</question>
+	<difficulty>-2.391</difficulty>
+</profitQuestionDataStorage>

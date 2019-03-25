@@ -64,6 +64,19 @@ public class SimpleEngine implements IEngine {
 					0.492996f, 0.991516f, 1.426546f, 2.145324f,
 					2.836668f};
 		}
+		else if (quizName.equals(TestVariants.GEOGEBRA.toString())) {
+			upperBounds = new float[]{
+					-2.715000f, -2.246250f, -2.049900f, -1.631000f,
+					-1.440625f, -1.316250f, -1.169125f, -0.832000f,
+					-0.710075f, -0.551250f, -0.443000f, -0.358900f,
+					-0.202650f, -0.079700f, 0.169000f, 0.251200f,
+					0.310700f, 0.411500f, 0.526175f, 0.610500f,
+					0.744375f, 0.805600f, 0.844675f, 0.927600f,
+					1.027125f, 1.170350f, 1.252075f, 1.377600f,
+					1.515100f, 1.600750f, 1.716900f, 1.946600f,
+					2.041800f, 2.262850f, 2.430500f, 2.619900f,
+					2.921600f, 3.103350f, 3.794900f, 4.937000f};
+		}
 		Arrays.sort(upperBounds);
 		this.upperBounds = upperBounds;
 		LogHelper.logInfo(String.valueOf("Total number of question categories: " + upperBounds.length));
