@@ -3,10 +3,15 @@ package at.jku.ce.adaptivetesting.views.test.geogebra;
 import at.jku.ce.adaptivetesting.core.LogHelper;
 import at.jku.ce.adaptivetesting.core.db.ConnectionProvider;
 import at.jku.ce.adaptivetesting.core.engine.TestVariants;
+import at.jku.ce.adaptivetesting.questions.accounting.ProfitQuestion;
+import at.jku.ce.adaptivetesting.questions.accounting.ProfitQuestionXml;
+import at.jku.ce.adaptivetesting.questions.geogebra.util.GeogebraXmlHelper;
 import at.jku.ce.adaptivetesting.questions.geogebra.GeogebraQuestionXml;
 import at.jku.ce.adaptivetesting.questions.geogebra.GeogebraQuestion;
 import at.jku.ce.adaptivetesting.questions.geogebra.GeogebraDataStorage;
 import at.jku.ce.adaptivetesting.views.def.DefaultView;
+import com.vaadin.server.FileResource;
+import com.vaadin.ui.Image;
 import com.vaadin.ui.Notification;
 import org.apache.commons.io.ByteOrderMark;
 import org.apache.commons.io.input.BOMInputStream;
@@ -95,6 +100,13 @@ public class GeogebraQuestionKeeper {
             String fileAsString = sb.toString().replaceAll("& ", "&amp; ");
             File image = checkImageAvailable(containingFolder, f.getName());
             if (fileAsString.contains(geoRootElement)) {
+                // Profit Question
+                questionInitializedInfo(f, successfullyLoaded, GeogebraQuestion.class.getName());
+                GeogebraQuestionXml question = (GeogebraQuestionXml) geoUnmarshaller
+                        .unmarshal(new StringReader(fileAsString));
+                GeogebraQuestion pq = GeogebraXmlHelper.fromXml(question, f.getName());
+                geogebraList.add(pq);
+                successfullyLoaded++;
             }
             else {
                 LogHelper.logInfo("GeogebraTestView: item type not supported for " + f.getName() + ", ignoring file.");

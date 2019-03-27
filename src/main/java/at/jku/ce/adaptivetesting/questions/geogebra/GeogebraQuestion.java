@@ -26,18 +26,17 @@ import java.io.*;
 public class GeogebraQuestion extends VerticalLayout implements IQuestion<GeogebraDataStorage>, Cloneable {
 
     private static final long serialVersionUID = 6373936654529246422L;
-    private GeogebraDataStorage solution, userAnswer;
+    private GeogebraDataStorage question;
     private float difficulty = 0;
-    private Label question;
+    private Label questionL;
     private String id;
 
 
 
-    public GeogebraQuestion(GeogebraDataStorage solution, GeogebraDataStorage userAnswer, float difficulty, String id) {
+    public GeogebraQuestion(GeogebraDataStorage question, float difficulty, String id) {
         this.difficulty = difficulty;
         this.id = id;
-        this.userAnswer = userAnswer;
-        this.solution = solution;
+        this.question = question;
     }
 
     public String getQuestionID() {
@@ -49,7 +48,7 @@ public class GeogebraQuestion extends VerticalLayout implements IQuestion<Geogeb
         return objClone;
     }
     public String getQuestionText() {
-        return question.getValue();
+        return questionL.getValue();
     }
 
     @SuppressWarnings("unchecked")
@@ -86,10 +85,10 @@ public class GeogebraQuestion extends VerticalLayout implements IQuestion<Geogeb
     }
 
     public GeogebraDataStorage getSolution() {
-        return solution;
+        return question;
     }
     public GeogebraDataStorage getUserAnswer() {
-        return userAnswer;
+        return question;
     }
 
 
