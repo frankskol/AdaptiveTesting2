@@ -240,6 +240,9 @@ public abstract class TestView extends VerticalLayout implements
 		} else if (quizName.equals(TestVariants.SQL.toString())) {
 			testTypeFolder = TestVariants.SQL.getFolderName();
 		}
+		else if (quizName.equals(TestVariants.GEOGEBRA.toString())) {
+			testTypeFolder = TestVariants.GEOGEBRA.getFolderName();
+		}
 		return DefaultView.Servlet.getResultFolderName() + testTypeFolder;
 	}
 }

@@ -28,9 +28,7 @@ import com.vaadin.data.Property;
 import com.vaadin.navigator.Navigator;
 import com.vaadin.navigator.ViewChangeListener;
 import com.vaadin.navigator.ViewChangeListener.ViewChangeEvent;
-import com.vaadin.server.Page;
-import com.vaadin.server.VaadinRequest;
-import com.vaadin.server.VaadinServlet;
+import com.vaadin.server.*;
 import com.vaadin.shared.ui.combobox.FilteringMode;
 import com.vaadin.ui.*;
 
@@ -173,6 +171,24 @@ public class DefaultView extends UI {
 		@Override
 		protected void servletInitialized() throws ServletException {
 			super.servletInitialized();
+
+			getService().addSessionInitListener(new SessionInitListener() {
+				@Override
+				public void sessionInit(SessionInitEvent event) throws ServiceException {
+					event.getSession().addBootstrapListener(new BootstrapListener() {
+						@Override
+						public void modifyBootstrapPage(BootstrapPageResponse response) {
+							response.getDocument().head().prependElement("script").attr("src","https://cdn.geogebra.org/apps/deployggb.js");
+							response.getDocument().head().prependElement("meta").attr("name","viewport")
+									.attr("content", "width=device-width,initial-scale=1").attr("charset","utf-8");
+
+						}
+						@Override
+						public void modifyBootstrapFragment(BootstrapFragmentResponse response) {
+						}
+					});
+				}
+			});
 			// Get the question folder as defined in WEB-INF/web.xml
 			questionFolderName = getServletConfig().getServletContext().getInitParameter(questionFolderKey);
 			File fQf = new File(questionFolderName);
