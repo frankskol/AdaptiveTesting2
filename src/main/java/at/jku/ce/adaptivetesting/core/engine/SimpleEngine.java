@@ -351,6 +351,22 @@ public class SimpleEngine implements IEngine {
 					break;
 			}
 		}
+		if (student.getQuizName().equals(TestVariants.GEOGEBRA.toString())) {
+			String studentExperience = student.getStudentExperience();
+			LogHelper.logInfo("Student experience: " + String.valueOf(studentExperience));
+			switch (studentExperience) {
+				default:
+				case "Anfänger":
+					question = getQuestion(setBag(0));
+					break;
+				case "Fortgeschritten":
+					question = getQuestion(setBag(1));
+					break;
+				case "Profi":
+					question = getQuestion(setBag(2));
+					break;
+			}
+		}
 		LogHelper.logInfo(String.valueOf("Difficulty of chosen question: " + question.getDifficulty()));
 		fireQuestionChangeListener(question);
 	}

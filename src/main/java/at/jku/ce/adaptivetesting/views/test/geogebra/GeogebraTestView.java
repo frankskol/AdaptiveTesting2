@@ -13,11 +13,14 @@ import at.jku.ce.adaptivetesting.views.Views;
 import at.jku.ce.adaptivetesting.views.html.HtmlLabel;
 import at.jku.ce.adaptivetesting.views.test.TestView;
 import at.jku.ce.adaptivetesting.views.test.geogebra.GeogebraQuestionKeeperProvider;
+import com.google.gwt.thirdparty.common.css.compiler.gssfunctions.GssFunctions;
 import com.vaadin.server.FileResource;
+import com.vaadin.server.Page;
 import com.vaadin.server.VaadinServlet;
 import com.vaadin.shared.ui.combobox.FilteringMode;
 import com.vaadin.shared.ui.label.ContentMode;
 import com.vaadin.ui.*;
+import com.vaadin.ui.Window;
 
 import javax.xml.bind.JAXBException;
 import java.io.File;
@@ -41,21 +44,20 @@ public class GeogebraTestView extends TestView {
 		super(quizName);
 		QuestionProvider = new GeogebraQuestionKeeperProvider();
 		//Window mainWindow = new Window("Injecttest Application");
-		Label ggbElement = new Label("<div id=\"ggb-element\"></div>",ContentMode.HTML);
 		Button cancel = new Button("Test abbrechen");
 		cancel.addClickListener(e -> {
 			getUI().getNavigator().navigateTo(Views.DEFAULT.toString());
 			LogHelper.logInfo("The test has been canceled by the student");
 		});
-		//StringBuilder script = new StringBuilder();
-		//script
-		//		.append("var ggbApp = new GGBApplet({\"appName\": \"graphing\", \"width\": 800, \"height\": 600, \"showToolBar\": true, \"showAlgebraInput\": true, \"showMenuBar\": true }, true);")
-		//		.append("  window.addEventListener(\"load\", function() { ggbApp.inject('ggb-element');\n" +
-		//				"    });");
-		// @formatter:on
-		//mainWindow.executeJavaScript(script.toString());
-
+		StringBuilder script = new StringBuilder();
+		script
+				.append("var ggbApp = new GGBApplet({\"appName\": \"graphing\", \"width\": 800, \"height\": 600, \"showToolBar\": true, \"showAlgebraInput\": true, \"showMenuBar\": true }, true);")
+			.append("  window.addEventListener(\"load\", function() { ggbApp.inject('ggb-element');\n" +
+						"    });");
+		Label ggbElement = new Label("<div id=\"ggb-element\"></div>",ContentMode.HTML);
 		addComponent(ggbElement);
+		Page.getCurrent().getJavaScript().execute(script.toString());
+
 		addHelpButton(cancel);
 	}
 

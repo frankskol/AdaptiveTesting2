@@ -100,7 +100,7 @@ public class GeogebraQuestionKeeper {
             String fileAsString = sb.toString().replaceAll("& ", "&amp; ");
             File image = checkImageAvailable(containingFolder, f.getName());
             if (fileAsString.contains(geoRootElement)) {
-                // Profit Question
+                // Geogebra Question
                 questionInitializedInfo(f, successfullyLoaded, GeogebraQuestion.class.getName());
                 GeogebraQuestionXml question = (GeogebraQuestionXml) geoUnmarshaller
                         .unmarshal(new StringReader(fileAsString));
