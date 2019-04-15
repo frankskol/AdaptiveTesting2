@@ -43,22 +43,28 @@ public class GeogebraTestView extends TestView {
 	public GeogebraTestView(String quizName) {
 		super(quizName);
 		QuestionProvider = new GeogebraQuestionKeeperProvider();
-		//Window mainWindow = new Window("Injecttest Application");
 		Button cancel = new Button("Test abbrechen");
 		cancel.addClickListener(e -> {
 			getUI().getNavigator().navigateTo(Views.DEFAULT.toString());
 			LogHelper.logInfo("The test has been canceled by the student");
 		});
+		addHelpButton(cancel);
+
+		Label ggbElement = new Label("<div id=\"ggb-element\"></div>",ContentMode.HTML);
+		addComponent(ggbElement);
+
 		StringBuilder script = new StringBuilder();
 		script
 				.append("var ggbApp = new GGBApplet({\"appName\": \"graphing\", \"width\": 800, \"height\": 600, \"showToolBar\": true, \"showAlgebraInput\": true, \"showMenuBar\": true }, true);")
 			.append("  window.addEventListener(\"load\", function() { ggbApp.inject('ggb-element');\n" +
 						"    });");
-		Label ggbElement = new Label("<div id=\"ggb-element\"></div>",ContentMode.HTML);
-		addComponent(ggbElement);
-		Page.getCurrent().getJavaScript().execute(script.toString());
 
-		addHelpButton(cancel);
+		//execute Javascript
+		JavaScript.getCurrent().execute(script.toString());
+		//or
+		//Page.getCurrent().getJavaScript().execute(script.toString());
+
+
 	}
 
 	//data of the students with the question asked at the beginning
