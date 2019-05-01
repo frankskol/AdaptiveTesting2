@@ -3,8 +3,6 @@ package at.jku.ce.adaptivetesting.views.test.geogebra;
 import at.jku.ce.adaptivetesting.core.LogHelper;
 import at.jku.ce.adaptivetesting.core.db.ConnectionProvider;
 import at.jku.ce.adaptivetesting.core.engine.TestVariants;
-import at.jku.ce.adaptivetesting.questions.accounting.ProfitQuestion;
-import at.jku.ce.adaptivetesting.questions.accounting.ProfitQuestionXml;
 import at.jku.ce.adaptivetesting.questions.geogebra.util.GeogebraXmlHelper;
 import at.jku.ce.adaptivetesting.questions.geogebra.GeogebraQuestionXml;
 import at.jku.ce.adaptivetesting.questions.geogebra.GeogebraQuestion;
@@ -98,7 +96,6 @@ public class GeogebraQuestionKeeper {
                 }
             }
             String fileAsString = sb.toString().replaceAll("& ", "&amp; ");
-            File image = checkImageAvailable(containingFolder, f.getName());
             if (fileAsString.contains(geoRootElement)) {
                 // Geogebra Question
                 questionInitializedInfo(f, successfullyLoaded, GeogebraQuestion.class.getName());
@@ -132,23 +129,6 @@ public class GeogebraQuestionKeeper {
         return questions.length;
     }
 
-    private File checkImageAvailable(File containingFolder, String fileName) {
-        String imageName = fileName.replace(".xml",".png");
-        File image = new File(containingFolder, imageName);
-        if (image.exists()) {
-            return image;
-        }
-        else {
-            imageName = fileName.replace(".xml",".jpg");
-            image = new File(containingFolder, imageName);
-            if (image.exists()) {
-                return image;
-            }
-            else {
-                return null;
-            }
-        }
-    }
 
     private static void questionInitializedInfo(File file, int counter, String questionType) {
         counter++;

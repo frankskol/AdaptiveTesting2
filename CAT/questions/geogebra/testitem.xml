@@ -1,8 +1,7 @@
 <?xml version="1.0"?>
 <geogebraQuestionDataStorage>
 	<dataStorage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="geogebraDataStorage">
-		<Id>fqUwedfs</Id>
-		<difficulty>0.411500f</difficulty>
 	</dataStorage>
+	<question>&lt;br /&gt;fqUwedfs&lt;br /&gt;</question>
 	<difficulty>0.411500f</difficulty>
 </geogebraQuestionDataStorage>

@@ -1,44 +1,51 @@
 package at.jku.ce.adaptivetesting.questions.geogebra;
 
-import at.jku.ce.adaptivetesting.core.IQuestion;
+/*This file is part of the project "Reisisoft Adaptive Testing",
+ * which is licenced under LGPL v3+. You may find a copy in the source,
+ * or obtain one at http://www.gnu.org/licenses/lgpl-3.0-standalone.html */
 import at.jku.ce.adaptivetesting.core.LogHelper;
-import at.jku.ce.adaptivetesting.core.db.ConnectionProvider;
-import at.jku.ce.adaptivetesting.questions.XmlQuestionData;
-import at.jku.ce.adaptivetesting.questions.datamod.SqlDataStorage;
-import at.jku.ce.adaptivetesting.questions.datamod.SqlQuestionXml;
+import at.jku.ce.adaptivetesting.questions.accounting.util.ProfitPossibleAnswers;
+import at.jku.ce.adaptivetesting.core.IQuestion;
 import at.jku.ce.adaptivetesting.views.html.HtmlLabel;
-import at.jku.ce.adaptivetesting.views.test.datamod.TableWindow;
-import com.vaadin.server.Page;
+import at.jku.ce.adaptivetesting.questions.XmlQuestionData;
+
+import com.vaadin.ui.ComboBox;
 import com.vaadin.ui.Image;
 import com.vaadin.ui.Label;
-import com.vaadin.ui.Notification;
 import com.vaadin.ui.VerticalLayout;
-import org.vaadin.hene.expandingtextarea.ExpandingTextArea;
 
 import java.io.*;
 
-//import org.jooq.exception.DataAccessException;
-
-/**
- * Created by Peter
- */
-
-public class GeogebraQuestion extends VerticalLayout implements IQuestion<GeogebraDataStorage>, Cloneable {
+public class GeogebraQuestion extends VerticalLayout implements
+        IQuestion<GeogebraDataStorage>, Cloneable {
 
     private static final long serialVersionUID = 6373936654529246422L;
-    private GeogebraDataStorage question;
+    private GeogebraDataStorage solution;
     private float difficulty = 0;
-    private Label questionL;
+    private Label question;
+
     private String id;
 
-
-
-    public GeogebraQuestion(GeogebraDataStorage question, float difficulty, String id) {
-        this.difficulty = difficulty;
-        this.id = id;
-        this.question = question;
+    public GeogebraQuestion(GeogebraDataStorage solution, Float difficulty,
+                          String questionText, String id) {
+        this(solution, GeogebraDataStorage.getEmptyDataStorage(), difficulty,
+                questionText, id);
     }
 
+    public GeogebraQuestion(GeogebraDataStorage solution,
+                            GeogebraDataStorage prefilled, float difficulty, String questionText, String id) {
+        // super(1, 2);
+        this.difficulty = difficulty;
+        this.id = id;
+        question = new HtmlLabel();
+        setQuestionText(questionText);
+
+        this.solution = solution;
+        addComponent(question);
+        setSpacing(true);
+    }
+
+    @Override
     public String getQuestionID() {
         return id;
     }
@@ -46,13 +53,11 @@ public class GeogebraQuestion extends VerticalLayout implements IQuestion<Geogeb
     public GeogebraQuestion clone() throws CloneNotSupportedException {
         GeogebraQuestion objClone = (GeogebraQuestion)super.clone();
         return objClone;
-    }
-    public String getQuestionText() {
-        return questionL.getValue();
+
     }
 
     @SuppressWarnings("unchecked")
-    public GeogebraQuestion cloneThroughSerialize(GeogebraQuestion t) throws Exception {
+    public static  GeogebraQuestion cloneThroughSerialize(GeogebraQuestion t) throws Exception {
         ByteArrayOutputStream bos = new ByteArrayOutputStream();
         serializeToOutputStream(t, bos);
         byte[] bytes = bos.toByteArray();
@@ -60,7 +65,8 @@ public class GeogebraQuestion extends VerticalLayout implements IQuestion<Geogeb
         return (GeogebraQuestion)ois.readObject();
     }
 
-    private static void serializeToOutputStream(Serializable ser, OutputStream os) throws IOException {
+    private static void serializeToOutputStream(Serializable ser, OutputStream os)
+            throws IOException {
         ObjectOutputStream oos = null;
         try {
             oos = new ObjectOutputStream(os);
@@ -71,30 +77,39 @@ public class GeogebraQuestion extends VerticalLayout implements IQuestion<Geogeb
         }
     }
 
-
-    public void setText(Label label, String text) {
-        label.setValue(text);
+    @Override
+    public String getQuestionText() {
+        return question.getValue();
     }
 
-    public void setQuestionText(Label label, String text) {
-        label.setValue("<p style=\"color:#0099ff\">" + text + "</p>");
+    public void setQuestionText(String questionText) {
+        question.setValue("<br />" + questionText + "<br />");
     }
 
     public void setDifficulty(float difficulty) {
         this.difficulty = difficulty;
     }
 
+    @Override
     public GeogebraDataStorage getSolution() {
-        return question;
+        return solution;
     }
+
+    @Override
     public GeogebraDataStorage getUserAnswer() {
-        return question;
+        return new GeogebraDataStorage();
     }
 
-
+    @Override
     public double checkUserAnswer() {
-        //TODO
-        return 0;
+        LogHelper.logInfo("Questionfile: " + id);
+        if ((solution.equals(1) ? 1d : 0d) == 1d) {
+            LogHelper.logInfo("Correct answer");
+            return 1.0d;
+        } else {
+            LogHelper.logInfo("Incorrect answer");
+            return 0.0d;
+        }
     }
 
     @Override
@@ -102,24 +117,21 @@ public class GeogebraQuestion extends VerticalLayout implements IQuestion<Geogeb
         return 0;
     }
 
+    @Override
     public float getDifficulty() {
         return difficulty;
     }
 
+    @Override
     public XmlQuestionData<GeogebraDataStorage> toXMLRepresentation() {
-        return new GeogebraQuestionXml(getSolution(), getQuestionText(), getDifficulty());
+        return new GeogebraQuestionXml(getSolution(), getQuestionText(),
+                getDifficulty());
     }
 
-
+    @Override
     public double getMaxPoints() {
         return 1d;
     }
 
-    // Custom Notification that stays on-screen until user presses it
-    private void createAndShowNotification(String caption, String description, Notification.Type type) {
-        description += "<span style=\"position:fixed;top:0;left:0;width:100%;height:100%\"></span>";
-        Notification notif = new Notification(caption, description, type, true);
-        notif.setDelayMsec(-1);
-        notif.show(Page.getCurrent());
-    }
+
 }

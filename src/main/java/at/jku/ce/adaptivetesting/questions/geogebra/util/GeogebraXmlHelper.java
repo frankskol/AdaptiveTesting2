@@ -10,8 +10,8 @@ import at.jku.ce.adaptivetesting.questions.geogebra.GeogebraQuestion;
 
 public final class GeogebraXmlHelper {
 	public static GeogebraQuestion fromXml(GeogebraQuestionXml xml, String id) {
-		return new GeogebraQuestion(xml.getDataStorage(),
-				xml.getDifficulty(), xml.getQuestion());
+		return new GeogebraQuestion(xml.getDataStorage(), xml.getDifficulty(),
+				xml.getQuestion().replace("\\n", " <br />"), id);
 
 	}
 }

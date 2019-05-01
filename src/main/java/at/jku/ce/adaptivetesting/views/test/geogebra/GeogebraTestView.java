@@ -60,7 +60,12 @@ public class GeogebraTestView extends TestView {
 						"    });");
 
 		//execute Javascript
-		JavaScript.getCurrent().execute(script.toString());
+		Label lb=new Label();
+		lb.addAttachListener(e->{
+			JavaScript.getCurrent().execute(script.toString());
+		});
+		addComponent(lb);
+		//JavaScript.getCurrent().execute(script.toString());
 		//or
 		//Page.getCurrent().getJavaScript().execute(script.toString());
 
