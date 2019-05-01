@@ -9,10 +9,8 @@ import at.jku.ce.adaptivetesting.core.IQuestion;
 import at.jku.ce.adaptivetesting.views.html.HtmlLabel;
 import at.jku.ce.adaptivetesting.questions.XmlQuestionData;
 
-import com.vaadin.ui.ComboBox;
-import com.vaadin.ui.Image;
-import com.vaadin.ui.Label;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.server.ExternalResource;
+import com.vaadin.ui.*;
 
 import java.io.*;
 
@@ -38,9 +36,16 @@ public class GeogebraQuestion extends VerticalLayout implements
         this.difficulty = difficulty;
         this.id = id;
         question = new HtmlLabel();
-        setQuestionText(questionText);
 
+        String script = "var ggbApp = new GGBApplet({\"appName\": \"graphing\",\"material_id\":\"fqUwedfs\", \"width\": 800, \"height\": 600, \"showToolBar\": true, \"showAlgebraInput\": true, \"showMenuBar\": true }, true);\n" +
+                "\t\t\twindow.addEventListener(\"load\", function() { \n" +
+                "\t\t\t\tggbApp.inject('ggb-element');\n" +
+                "\t\t\t});";
+        setQuestionText(script);
         this.solution = solution;
+        question.addAttachListener(e->{
+            JavaScript.getCurrent().execute(script);
+        });
         addComponent(question);
         setSpacing(true);
     }
@@ -83,7 +88,7 @@ public class GeogebraQuestion extends VerticalLayout implements
     }
 
     public void setQuestionText(String questionText) {
-        question.setValue("<br />" + questionText + "<br />");
+        question.setValue("<div id=\"ggb-element\">"+ "</div>");
     }
 
     public void setDifficulty(float difficulty) {

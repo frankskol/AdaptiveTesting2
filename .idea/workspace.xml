@@ -9,13 +9,12 @@
     <list default="true" id="db76b226-053a-422f-ada1-c8cc1d0caac5" name="Default Changelist" comment="Made project runnable and added folder for Geogebra questions">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CAT/questions/geogebra/testitem.xml" beforeDir="false" afterPath="$PROJECT_DIR$/CAT/questions/geogebra/testitem.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/at/jku/ce/adaptivetesting/questions/geogebra/GeogebraDataStorage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/jku/ce/adaptivetesting/questions/geogebra/GeogebraDataStorage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/at/jku/ce/adaptivetesting/questions/geogebra/GeogebraQuestion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/jku/ce/adaptivetesting/questions/geogebra/GeogebraQuestion.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/at/jku/ce/adaptivetesting/questions/geogebra/util/GeogebraXmlHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/jku/ce/adaptivetesting/questions/geogebra/util/GeogebraXmlHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/at/jku/ce/adaptivetesting/views/test/geogebra/GeogebraQuestionKeeper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/jku/ce/adaptivetesting/views/test/geogebra/GeogebraQuestionKeeper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/at/jku/ce/adaptivetesting/views/test/geogebra/GeogebraTestView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/jku/ce/adaptivetesting/views/test/geogebra/GeogebraTestView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/AdaptiveTesting-1.1.2.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/AdaptiveTesting-1.1.2.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/AdaptiveTesting-1.1.2/WEB-INF/classes/at/jku/ce/adaptivetesting/questions/geogebra/GeogebraQuestion.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/AdaptiveTesting-1.1.2/WEB-INF/classes/at/jku/ce/adaptivetesting/questions/geogebra/GeogebraQuestion.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/AdaptiveTesting-1.1.2/WEB-INF/classes/at/jku/ce/adaptivetesting/views/test/geogebra/GeogebraTestView.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/AdaptiveTesting-1.1.2/WEB-INF/classes/at/jku/ce/adaptivetesting/views/test/geogebra/GeogebraTestView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/at/jku/ce/adaptivetesting/questions/geogebra/GeogebraQuestion.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/at/jku/ce/adaptivetesting/questions/geogebra/GeogebraQuestion.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/at/jku/ce/adaptivetesting/views/test/geogebra/GeogebraTestView.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/at/jku/ce/adaptivetesting/views/test/geogebra/GeogebraTestView.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
@@ -27,11 +26,31 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/at/jku/ce/adaptivetesting/questions/geogebra/GeogebraQuestion.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="100">
+              <caret line="11" column="42" lean-forward="true" selection-start-line="11" selection-start-column="42" selection-end-line="11" selection-end-column="42" />
+              <folding>
+                <element signature="e#2219#2220#0" expanded="true" />
+                <element signature="e#3250#3251#0" expanded="true" />
+                <element signature="e#3377#3378#0" expanded="true" />
+                <element signature="e#3472#3473#0" expanded="true" />
+                <element signature="e#3565#3566#0" expanded="true" />
+                <element signature="e#3677#3678#0" expanded="true" />
+                <element signature="e#4098#4099#0" expanded="true" />
+                <element signature="e#4181#4182#0" expanded="true" />
+                <element signature="e#4456#4457#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/at/jku/ce/adaptivetesting/views/test/geogebra/GeogebraTestView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="157" selection-start-line="157" selection-end-line="157" />
+            <state relative-caret-position="263">
+              <caret line="50" column="30" selection-start-line="50" selection-start-column="30" selection-end-line="50" selection-end-column="30" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -40,14 +59,46 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/at/jku/ce/adaptivetesting/views/test/geogebra/GeogebraQuestionKeeperProvider.java">
+        <entry file="jar://$MAVEN_REPOSITORY$/com/vaadin/vaadin-server/7.7.4/vaadin-server-7.7.4.jar!/com/vaadin/ui/AbstractJavaScriptComponent.class">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" selection-start-line="10" selection-end-line="10" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#334#335#0" expanded="true" />
-              </folding>
+            <state>
+              <caret line="11" column="22" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/com/vaadin/vaadin-server/7.7.4/vaadin-server-7.7.4.jar!/com/vaadin/ui/Window.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-9416">
+              <caret line="41" column="13" selection-start-line="41" selection-start-column="13" selection-end-line="41" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CAT/questions/geogebra/testitem.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="4" column="22" selection-start-line="4" selection-start-column="14" selection-end-line="4" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/at/jku/ce/adaptivetesting/core/engine/SimpleEngine.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="604">
+              <caret line="373" column="26" selection-start-line="373" selection-start-column="26" selection-end-line="373" selection-end-column="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/at/jku/ce/adaptivetesting/core/engine/EngineException.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -55,8 +106,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/at/jku/ce/adaptivetesting/views/def/DefaultView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="152">
-              <caret line="137" selection-start-line="137" selection-end-line="137" />
+            <state relative-caret-position="102">
+              <caret line="180" column="53" selection-start-line="180" selection-start-column="53" selection-end-line="180" selection-end-column="53" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -65,81 +116,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/at/jku/ce/adaptivetesting/questions/geogebra/GeogebraDataStorage.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="128">
-              <caret line="20" column="34" selection-start-line="20" selection-start-column="34" selection-end-line="20" selection-end-column="34" />
-              <folding>
-                <element signature="e#986#987#0" expanded="true" />
-                <element signature="e#1023#1024#0" expanded="true" />
-                <element signature="e#1067#1068#0" expanded="true" />
-                <element signature="e#1092#1093#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/CAT/questions/geogebra/testitem.xml">
+        <entry file="file://$PROJECT_DIR$/src/main/java/at/jku/ce/adaptivetesting/core/engine/StudentData.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="119">
-              <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
-              <folding>
-                <element signature="e#199#203#0" expanded="true" />
-                <element signature="e#318#322#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/CAT/questions/accounting/testitem.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="148" selection-start-line="5" selection-start-column="145" selection-end-line="5" selection-end-column="148" />
-              <folding>
-                <element signature="e#211#215#0" expanded="true" />
-                <element signature="e#342#346#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/at/jku/ce/adaptivetesting/questions/accounting/ProfitDataStorage.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="16" column="32" selection-start-line="16" selection-start-column="32" selection-end-line="16" selection-end-column="32" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/at/jku/ce/adaptivetesting/questions/accounting/AccountingDataStorage.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="37" column="33" selection-start-line="37" selection-start-column="33" selection-end-line="37" selection-end-column="33" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/at/jku/ce/adaptivetesting/questions/datamod/SqlDataStorage.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/at/jku/ce/adaptivetesting/views/test/geogebra/GeogebraQuestionKeeper.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="48" selection-start-line="48" selection-end-line="48" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+              <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -193,13 +173,13 @@
         <option value="$PROJECT_DIR$/src/main/java/at/jku/ce/adaptivetesting/views/def/DefaultView.java" />
         <option value="$PROJECT_DIR$/src/main/java/at/jku/ce/adaptivetesting/core/engine/SimpleEngine.java" />
         <option value="$PROJECT_DIR$/src/main/java/at/jku/ce/adaptivetesting/views/test/datamod/DatamodQuestionKeeper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/at/jku/ce/adaptivetesting/views/test/geogebra/GeogebraTestView.java" />
         <option value="$PROJECT_DIR$/src/main/java/at/jku/ce/adaptivetesting/views/test/accounting/AccountingTestView.java" />
         <option value="$PROJECT_DIR$/src/main/java/at/jku/ce/adaptivetesting/views/test/geogebra/GeogebraQuestionKeeper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/at/jku/ce/adaptivetesting/questions/geogebra/GeogebraQuestion.java" />
         <option value="$PROJECT_DIR$/src/main/java/at/jku/ce/adaptivetesting/questions/geogebra/util/GeogebraXmlHelper.java" />
         <option value="$PROJECT_DIR$/src/main/java/at/jku/ce/adaptivetesting/questions/geogebra/GeogebraDataStorage.java" />
         <option value="$PROJECT_DIR$/CAT/questions/geogebra/testitem.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/at/jku/ce/adaptivetesting/views/test/geogebra/GeogebraTestView.java" />
+        <option value="$PROJECT_DIR$/src/main/java/at/jku/ce/adaptivetesting/questions/geogebra/GeogebraQuestion.java" />
       </list>
     </option>
   </component>
@@ -237,7 +217,7 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-285" />
     <option name="y" value="60" />
     <option name="width" value="1750" />
@@ -315,6 +295,16 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="adaptivetesting" type="462c0819:PsiDirectoryNode" />
               <item name="core" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="AdaptiveTesting2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AdaptiveTesting2" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="adaptivetesting" type="462c0819:PsiDirectoryNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
+              <item name="db" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="AdaptiveTesting2" type="b2602c69:ProjectViewProjectNode" />
@@ -405,6 +395,26 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="adaptivetesting" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="AdaptiveTesting2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AdaptiveTesting2" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="adaptivetesting" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="def" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="AdaptiveTesting2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AdaptiveTesting2" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="adaptivetesting" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="html" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="AdaptiveTesting2" type="b2602c69:ProjectViewProjectNode" />
@@ -507,10 +517,11 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556702803364" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556717428599" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/gwt-2.8.2" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -695,12 +706,13 @@
       <workItem from="1554899499871" duration="9352000" />
       <workItem from="1555344815782" duration="1952000" />
       <workItem from="1555406770849" duration="725000" />
-      <workItem from="1556699317488" duration="3453000" />
+      <workItem from="1556699317488" duration="8750000" />
+      <workItem from="1556713278947" duration="4283000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="56867000" />
+    <option name="totallyTimeSpent" value="66447000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -715,7 +727,7 @@
     <frame x="55" y="-7" width="1488" height="878" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.33333334" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.3382353" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -725,7 +737,7 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3297587" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3538874" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3538874" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3994638" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -757,86 +769,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="Made project runnable and added folder for Geogebra questions" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/at/jku/ce/adaptivetesting/questions/accounting/MultiAccountingDataStorage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/at/jku/ce/adaptivetesting/core/db/ConnectionProvider.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
-          <folding>
-            <element signature="e#341#342#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/at/jku/ce/adaptivetesting/core/db/Connection.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1989">
-          <caret line="128" column="9" selection-start-line="128" selection-start-column="9" selection-end-line="130" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/at/jku/ce/adaptivetesting/core/AnswerStorage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="22" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/at/jku/ce/adaptivetesting/questions/accounting/AccountingQuestionXml.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/at/jku/ce/adaptivetesting/core/r/RConnectionProvider.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/at/jku/ce/adaptivetesting/questions/datamod/util/DatamodXmlHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="8" column="19" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/at/jku/ce/adaptivetesting/core/engine/HistoryEntry.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/at/jku/ce/adaptivetesting/core/engine/IResultFiredListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/at/jku/ce/adaptivetesting/core/engine/ResultFiredArgs.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/at/jku/ce/adaptivetesting/core/engine/TestVariants.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="29" lean-forward="true" selection-start-line="7" selection-start-column="29" selection-end-line="7" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/at/jku/ce/adaptivetesting/views/Views.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="12" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="12" />
         </state>
       </provider>
     </entry>
@@ -858,13 +794,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/at/jku/ce/adaptivetesting/core/engine/StudentData.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -1045,66 +974,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/at/jku/ce/adaptivetesting/core/engine/SimpleEngine.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="373" column="26" lean-forward="true" selection-start-line="373" selection-start-column="26" selection-end-line="373" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/at/jku/ce/adaptivetesting/questions/geogebra/GeogebraQuestion.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="94">
-          <caret line="119" column="13" lean-forward="true" selection-start-line="119" selection-start-column="13" selection-end-line="119" selection-end-column="13" />
-          <folding>
-            <element signature="e#2696#2726#0" expanded="true" />
-            <element signature="e#3176#3177#0" expanded="true" />
-            <element signature="e#3221#3222#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/at/jku/ce/adaptivetesting/views/test/geogebra/GeogebraQuestionKeeper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="48" selection-start-line="48" selection-end-line="48" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/at/jku/ce/adaptivetesting/views/test/geogebra/GeogebraQuestionKeeperProvider.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#334#335#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/at/jku/ce/adaptivetesting/views/test/geogebra/GeogebraTestView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="157" selection-start-line="157" selection-end-line="157" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/at/jku/ce/adaptivetesting/views/def/DefaultView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="137" selection-start-line="137" selection-end-line="137" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/at/jku/ce/adaptivetesting/questions/accounting/ProfitDataStorage.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -1150,13 +1019,172 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CAT/questions/geogebra/testitem.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/at/jku/ce/adaptivetesting/views/test/geogebra/GeogebraQuestionKeeperProvider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="38" selection-start-column="38" selection-end-column="38" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#296#297#0" expanded="true" />
+            <element signature="e#334#335#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/at/jku/ce/adaptivetesting/views/test/geogebra/GeogebraQuestionKeeper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1521">
+          <caret line="105" column="37" lean-forward="true" selection-start-line="105" selection-start-column="37" selection-end-line="105" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/vaadin/vaadin-server/7.7.4/vaadin-server-7.7.4.jar!/com/vaadin/ui/VerticalLayout.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
-          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+          <caret line="10" column="11" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
           <folding>
-            <element signature="e#199#203#0" expanded="true" />
-            <element signature="e#318#322#0" expanded="true" />
+            <element signature="e#282#283#0" expanded="true" />
+            <element signature="e#319#320#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/at/jku/ce/adaptivetesting/views/html/HtmlLabel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="8" column="33" selection-start-line="8" selection-start-column="33" selection-end-line="8" selection-end-column="33" />
+          <folding>
+            <element signature="e#395#396#0" expanded="true" />
+            <element signature="e#410#411#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/vaadin/vaadin-server/7.7.4/vaadin-server-7.7.4.jar!/com/vaadin/ui/Label.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-561">
+          <caret line="26" column="13" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
+          <folding>
+            <element signature="e#1743#1744#0" expanded="true" />
+            <element signature="e#1767#1768#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/vaadin/vaadin-server/7.7.4/vaadin-server-7.7.4.jar!/com/vaadin/ui/AbstractOrderedLayout.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="38" column="11" selection-start-line="38" selection-start-column="11" selection-end-line="38" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/at/jku/ce/adaptivetesting/core/engine/ICurrentQuestionChangeListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/at/jku/ce/adaptivetesting/core/engine/TestVariants.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="29" lean-forward="true" selection-start-line="7" selection-start-column="29" selection-end-line="7" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/at/jku/ce/adaptivetesting/views/Views.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="12" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/at/jku/ce/adaptivetesting/views/SingleComponentLayout.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/at/jku/ce/adaptivetesting/core/engine/EngineException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/at/jku/ce/adaptivetesting/core/engine/StudentData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/at/jku/ce/adaptivetesting/views/def/DefaultView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="180" column="53" selection-start-line="180" selection-start-column="53" selection-end-line="180" selection-end-column="53" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CAT/questions/geogebra/testitem.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="22" selection-start-line="4" selection-start-column="14" selection-end-line="4" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/at/jku/ce/adaptivetesting/core/engine/SimpleEngine.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="604">
+          <caret line="373" column="26" selection-start-line="373" selection-start-column="26" selection-end-line="373" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/vaadin/vaadin-server/7.7.4/vaadin-server-7.7.4.jar!/com/vaadin/ui/Window.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-9416">
+          <caret line="41" column="13" selection-start-line="41" selection-start-column="13" selection-end-line="41" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/vaadin/vaadin-server/7.7.4/vaadin-server-7.7.4.jar!/com/vaadin/ui/AbstractJavaScriptComponent.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="11" column="22" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/at/jku/ce/adaptivetesting/views/test/geogebra/GeogebraTestView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="263">
+          <caret line="50" column="30" selection-start-line="50" selection-start-column="30" selection-end-line="50" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/at/jku/ce/adaptivetesting/questions/geogebra/GeogebraQuestion.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="11" column="42" lean-forward="true" selection-start-line="11" selection-start-column="42" selection-end-line="11" selection-end-column="42" />
+          <folding>
+            <element signature="e#2219#2220#0" expanded="true" />
+            <element signature="e#3250#3251#0" expanded="true" />
+            <element signature="e#3377#3378#0" expanded="true" />
+            <element signature="e#3472#3473#0" expanded="true" />
+            <element signature="e#3565#3566#0" expanded="true" />
+            <element signature="e#3677#3678#0" expanded="true" />
+            <element signature="e#4098#4099#0" expanded="true" />
+            <element signature="e#4181#4182#0" expanded="true" />
+            <element signature="e#4456#4457#0" expanded="true" />
           </folding>
         </state>
       </provider>
