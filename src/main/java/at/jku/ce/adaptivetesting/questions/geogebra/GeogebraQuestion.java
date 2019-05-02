@@ -48,6 +48,8 @@ public class GeogebraQuestion extends VerticalLayout implements
         });
         addComponent(question);
         setSpacing(true);
+
+        addComponent(new GeogebraComponent("Hello World!"));
     }
 
     @Override
