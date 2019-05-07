@@ -179,7 +179,6 @@ public class DefaultView extends UI {
 						@Override
 						public void modifyBootstrapPage(BootstrapPageResponse response) {
 							response.getDocument().head().prependElement("script").attr("src","https://cdn.geogebra.org/apps/deployggb.js");
-							response.getDocument().head().prependElement("script").attr("src","at.jku.ce.adaptivetesting.questions.geogebra/js_label.js");
 							response.getDocument().head().prependElement("meta").attr("name","viewport")
 									.attr("content", "width=device-width,initial-scale=1").attr("charset","utf-8");
 
