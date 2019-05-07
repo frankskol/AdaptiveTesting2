@@ -8,21 +8,9 @@
   <component name="ChangeListManager">
     <list default="true" id="db76b226-053a-422f-ada1-c8cc1d0caac5" name="Default Changelist" comment="Made project runnable and added folder for Geogebra questions">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/at/jku/ce/adaptivetesting/views/def/DefaultView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/jku/ce/adaptivetesting/views/def/DefaultView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/at/jku/ce/adaptivetesting/questions/geogebra/mylibrary.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/at/jku/ce/adaptivetesting/questions/geogebra/mylibrary.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/AdaptiveTesting-1.1.2.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/AdaptiveTesting-1.1.2.war" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/AdaptiveTesting-1.1.2/WEB-INF/classes/at/jku/ce/adaptivetesting/questions/geogebra/mylibrary.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/AdaptiveTesting-1.1.2/WEB-INF/classes/at/jku/ce/adaptivetesting/questions/geogebra/mylibrary.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/AdaptiveTesting-1.1.2/WEB-INF/classes/at/jku/ce/adaptivetesting/views/def/DefaultView$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/AdaptiveTesting-1.1.2/WEB-INF/classes/at/jku/ce/adaptivetesting/views/def/DefaultView$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/AdaptiveTesting-1.1.2/WEB-INF/classes/at/jku/ce/adaptivetesting/views/def/DefaultView$Servlet$1$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/AdaptiveTesting-1.1.2/WEB-INF/classes/at/jku/ce/adaptivetesting/views/def/DefaultView$Servlet$1$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/AdaptiveTesting-1.1.2/WEB-INF/classes/at/jku/ce/adaptivetesting/views/def/DefaultView$Servlet$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/AdaptiveTesting-1.1.2/WEB-INF/classes/at/jku/ce/adaptivetesting/views/def/DefaultView$Servlet$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/AdaptiveTesting-1.1.2/WEB-INF/classes/at/jku/ce/adaptivetesting/views/def/DefaultView$Servlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/AdaptiveTesting-1.1.2/WEB-INF/classes/at/jku/ce/adaptivetesting/views/def/DefaultView$Servlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/AdaptiveTesting-1.1.2/WEB-INF/classes/at/jku/ce/adaptivetesting/views/def/DefaultView.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/AdaptiveTesting-1.1.2/WEB-INF/classes/at/jku/ce/adaptivetesting/views/def/DefaultView.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/at/jku/ce/adaptivetesting/questions/geogebra/mylibrary.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/at/jku/ce/adaptivetesting/questions/geogebra/mylibrary.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/at/jku/ce/adaptivetesting/views/def/DefaultView$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/at/jku/ce/adaptivetesting/views/def/DefaultView$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/at/jku/ce/adaptivetesting/views/def/DefaultView$Servlet$1$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/at/jku/ce/adaptivetesting/views/def/DefaultView$Servlet$1$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/at/jku/ce/adaptivetesting/views/def/DefaultView$Servlet$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/at/jku/ce/adaptivetesting/views/def/DefaultView$Servlet$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/at/jku/ce/adaptivetesting/views/def/DefaultView$Servlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/at/jku/ce/adaptivetesting/views/def/DefaultView$Servlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/at/jku/ce/adaptivetesting/views/def/DefaultView.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/at/jku/ce/adaptivetesting/views/def/DefaultView.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -58,7 +46,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/resources/at/jku/ce/adaptivetesting/questions/geogebra/mylibrary.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="153">
-              <caret line="9" column="17" lean-forward="true" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+              <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
             </state>
           </provider>
         </entry>
@@ -66,8 +54,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/at/jku/ce/adaptivetesting/questions/geogebra/GeogebraQuestion.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="100">
-              <caret line="46" column="50" selection-start-line="46" selection-start-column="50" selection-end-line="46" selection-end-column="50" />
+            <state relative-caret-position="389">
+              <caret line="64" column="5" lean-forward="true" selection-start-line="64" selection-start-column="5" selection-end-line="64" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/at/jku/ce/adaptivetesting/views/def/DefaultView.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-14">
+              <caret line="165" column="5" lean-forward="true" selection-start-line="165" selection-start-column="5" selection-end-line="165" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -78,15 +78,6 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
           <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/at/jku/ce/adaptivetesting/questions/geogebra/GeogebraQuestionXml.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="16" selection-start-line="16" selection-end-line="16" />
-            </state>
-          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -190,8 +181,8 @@
         <option value="$PROJECT_DIR$/src/main/java/at/jku/ce/adaptivetesting/questions/geogebra/GeogebraComponent.java" />
         <option value="$PROJECT_DIR$/src/main/resources/at/jku/ce/adaptivetesting/questions/geogebra/js_label.js" />
         <option value="$PROJECT_DIR$/src/main/resources/at/jku/ce/adaptivetesting/questions/geogebra/mycomponent-connector.js" />
-        <option value="$PROJECT_DIR$/src/main/java/at/jku/ce/adaptivetesting/views/def/DefaultView.java" />
         <option value="$PROJECT_DIR$/src/main/java/at/jku/ce/adaptivetesting/questions/geogebra/GeogebraQuestion.java" />
+        <option value="$PROJECT_DIR$/src/main/java/at/jku/ce/adaptivetesting/views/def/DefaultView.java" />
         <option value="$PROJECT_DIR$/src/main/resources/at/jku/ce/adaptivetesting/questions/geogebra/mylibrary.js" />
       </list>
     </option>
@@ -232,7 +223,7 @@
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-150" />
-    <option name="y" value="316" />
+    <option name="y" value="315" />
     <option name="width" value="1860" />
     <option name="height" value="1100" />
   </component>
@@ -242,6 +233,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -426,7 +418,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -631,11 +622,13 @@
       <workItem from="1557214675256" duration="6000" />
       <workItem from="1557214713166" duration="190000" />
       <workItem from="1557215142933" duration="282000" />
+      <workItem from="1557239059311" duration="179000" />
+      <workItem from="1557239267288" duration="1512000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="80738000" />
+    <option name="totallyTimeSpent" value="82429000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -648,8 +641,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="55" y="-7" width="1488" height="878" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.36484593" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21778712" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -659,7 +653,7 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3297587" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3538874" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3538874" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3994638" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -955,29 +949,6 @@
     <entry file="file://$PROJECT_DIR$/src/resources/at.jku.ce.adaptivetesting/VaadinWidgetset.gwt.xml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/at/jku/ce/adaptivetesting/views/def/DefaultView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2635">
-          <caret line="181" column="63" selection-start-line="181" selection-start-column="63" selection-end-line="181" selection-end-column="63" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/at/jku/ce/adaptivetesting/questions/geogebra/GeogebraComponent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="23" selection-start-line="23" selection-end-line="23" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/at/jku/ce/adaptivetesting/questions/geogebra/GeogebraQuestionXml.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
@@ -1013,6 +984,29 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/at/jku/ce/adaptivetesting/views/def/DefaultView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-14">
+          <caret line="165" column="5" lean-forward="true" selection-start-line="165" selection-start-column="5" selection-end-line="165" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/at/jku/ce/adaptivetesting/questions/geogebra/GeogebraComponent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="23" selection-start-line="23" selection-end-line="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/at/jku/ce/adaptivetesting/questions/geogebra/mycomponent-connector.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -1022,8 +1016,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/at/jku/ce/adaptivetesting/questions/geogebra/GeogebraQuestion.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="46" column="50" selection-start-line="46" selection-start-column="50" selection-end-line="46" selection-end-column="50" />
+        <state relative-caret-position="389">
+          <caret line="64" column="5" lean-forward="true" selection-start-line="64" selection-start-column="5" selection-end-line="64" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1033,7 +1027,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/resources/at/jku/ce/adaptivetesting/questions/geogebra/mylibrary.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
-          <caret line="9" column="17" lean-forward="true" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
         </state>
       </provider>
     </entry>

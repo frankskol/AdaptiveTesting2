@@ -3,7 +3,7 @@ var mylibrary = mylibrary || {};
 
 mylibrary.GeogebraComponent = function (element) {
     element.innerHTML =
-        "<div class='caption'>Hello, the world</div>" +
+        "<div class='caption'>Hello, world</div>" +
         "<div class='textinput'>Enter a value: " +
         "<input type='text' name='value'/>" +
         "<input type='button' value='Click'/>" +
