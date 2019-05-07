@@ -48,8 +48,20 @@ public class GeogebraQuestion extends VerticalLayout implements
         });
         addComponent(question);
         setSpacing(true);
+        final GeogebraComponent mycomponent = new GeogebraComponent();
 
-        addComponent(new GeogebraComponent("Hello World!"));
+        // Set the value from server-side
+        mycomponent.setValue("Server-side value");
+
+        // Process a value input by the user from the client-side
+        mycomponent.addValueChangeListener(
+                new GeogebraComponent.ValueChangeListener() {
+                    @Override
+                    public void valueChange() {
+                        Notification.show("Value: " + mycomponent.getValue());
+                    }
+                });
+        addComponent(mycomponent);
     }
 
     @Override

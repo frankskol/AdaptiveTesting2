@@ -7,11 +7,23 @@ import com.vaadin.ui.AbstractJavaScriptComponent;
 import java.io.Serializable;
 import java.util.ArrayList;
 
-@JavaScript({ "js_label.js" })
+@JavaScript({"mylibrary.js", "mycomponent-connector.js"})
 public class GeogebraComponent extends AbstractJavaScriptComponent {
+    public interface ValueChangeListener extends Serializable {
+        void valueChange();
+    }
+    ArrayList<ValueChangeListener> listeners =
+            new ArrayList<ValueChangeListener>();
+    public void addValueChangeListener(
+            ValueChangeListener listener) {
+        listeners.add(listener);
+    }
+    public void setValue(String value) {
+        getState().value = value;
+    }
 
-    public GeogebraComponent(String xhtml) {
-        getState().xhtml = xhtml;
+    public String getValue() {
+        return getState().value;
     }
 
     @Override
