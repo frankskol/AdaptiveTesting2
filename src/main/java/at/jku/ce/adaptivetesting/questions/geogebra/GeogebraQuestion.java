@@ -38,11 +38,20 @@ public class GeogebraQuestion extends VerticalLayout implements
         question = new HtmlLabel();
 
         this.solution = solution;
-        //addComponent(question);
         setSpacing(true);
         final GeogebraComponent mycomponent = new GeogebraComponent();
         mycomponent.setValue(questionText);
+        mycomponent.setWidth("800");
+        mycomponent.setHeight("650");
+        mycomponent.addValueChangeListener(
+                new GeogebraComponent.ValueChangeListener() {
+                    @Override
+                    public void valueChange() {
+                        Notification.show("Value: " + mycomponent.getValue());
+                    }
+                });
         addComponent(mycomponent);
+        setSpacing(true);
     }
 
     @Override

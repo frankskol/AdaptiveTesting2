@@ -5,16 +5,12 @@ geogebraLibrary.GeogebraComponent = function (element) {
         "<div id='applet_container'></div>" +
         "<input type='button' value='Submit'/>" +
         "</div>";
-
     //Variable for the GeoGebra-Exercise
     var ggbExercise = null;
 
     //Returns the exercise fraction, if the GeoGebra-Applet is an exercise
     this.getValue = function () {
-        if (geoApp.isExercise()) {
-            return geoApp.getExerciseFraction();
-        } else {
-            return -1.0;
+        return geoApp.response;
         }
     };
 

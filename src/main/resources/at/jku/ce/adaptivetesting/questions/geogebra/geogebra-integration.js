@@ -5,7 +5,6 @@ geogebraLibrary.GeogebraComponent = function (element) {
         "<div id='applet_container'></div>" +
         "<input type='button' value='Submit'/>" +
         "</div>";
-
     //Variable for the GeoGebra-Exercise
     var ggbExercise = null;
 
@@ -24,8 +23,8 @@ geogebraLibrary.GeogebraComponent = function (element) {
             ggbExercise = new GGBApplet({
                 "id": 'geoApp',
                 "material_id": materialNr,
-                "width": 500,
-                "height": 300,
+                "width": 800,
+                "height": 600,
                 "borderColor": "#55FF00"
             }, true);
             ggbExercise.inject('applet_container');
