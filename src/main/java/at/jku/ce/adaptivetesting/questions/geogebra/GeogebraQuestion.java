@@ -37,30 +37,11 @@ public class GeogebraQuestion extends VerticalLayout implements
         this.id = id;
         question = new HtmlLabel();
 
-        String script = "var ggbApp = new GGBApplet({\"appName\": \"graphing\",\"material_id\":\"fqUwedfs\", \"width\": 800, \"height\": 600, \"showToolBar\": true, \"showAlgebraInput\": true, \"showMenuBar\": true }, true);\n" +
-                "\t\t\twindow.addEventListener(\"load\", function() { \n" +
-                "\t\t\t\tggbApp.inject('ggb-element');\n" +
-                "\t\t\t});";
-        setQuestionText(script);
         this.solution = solution;
-        question.addAttachListener(e->{
-            JavaScript.getCurrent().execute(script);
-        });
-        addComponent(question);
+        //addComponent(question);
         setSpacing(true);
         final GeogebraComponent mycomponent = new GeogebraComponent();
-
-        // Set the value from server-side
-        mycomponent.setValue("Server-side value");
-
-        // Process a value input by the user from the client-side
-        mycomponent.addValueChangeListener(
-                new GeogebraComponent.ValueChangeListener() {
-                    @Override
-                    public void valueChange() {
-                        Notification.show("Value: " + mycomponent.getValue());
-                    }
-                });
+        mycomponent.setValue(questionText);
         addComponent(mycomponent);
     }
 
@@ -102,7 +83,7 @@ public class GeogebraQuestion extends VerticalLayout implements
     }
 
     public void setQuestionText(String questionText) {
-        question.setValue("<div id=\"ggb-element\">"+ "</div>");
+        question.setValue("<div id=\"ggb-element\">" + "</div>");
     }
 
     public void setDifficulty(float difficulty) {
