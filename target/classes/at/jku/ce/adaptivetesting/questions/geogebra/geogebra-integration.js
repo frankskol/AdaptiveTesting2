@@ -10,8 +10,7 @@ geogebraLibrary.GeogebraComponent = function (element) {
 
     //Returns the exercise fraction, if the GeoGebra-Applet is an exercise
     this.getValue = function () {
-        return geoApp.response;
-        }
+            return geoApp.getValue("correct");
     };
 
     //Injects the Div "applet_container" with an GeoGebra-Applet with the given material number
@@ -33,7 +32,7 @@ geogebraLibrary.GeogebraComponent = function (element) {
 
     //Default implementation of the click fuction; Is overwritten in the JavaScript-Connector
     this.click = function () {
-        alert(geoApp.getExerciseFraction());
+        alert(geoApp.getValue("correct"));
     };
 
     var button = element.getElementsByTagName("input")[0];

@@ -13,20 +13,43 @@ import at.jku.ce.adaptivetesting.questions.accounting.util.AccountRecordData;
 
 public class GeogebraDataStorage extends AnswerStorage {
     private static final long serialVersionUID = -8179746363246548456L;
+    private int value;
+
     public static GeogebraDataStorage getEmptyDataStorage() {
-        GeogebraDataStorage ds = new GeogebraDataStorage();
+        GeogebraDataStorage ds = new GeogebraDataStorage(1);
         return ds;
     }
 
     public GeogebraDataStorage() {
     }
+    public GeogebraDataStorage(int value) {
+        this.value = value;
+    }
 
     @Override
     public String toString() {
-        return toString(true);
+        return value == 1 ? "<Korrekte Lösung>" : "<Falsche Lösung>";
     }
 
-    public String toString(boolean html) {
-        return "";
+    public void setValue(int value) {
+        this.value = value;
+    }
+    public int getValue() {
+        return value;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        GeogebraDataStorage other = (GeogebraDataStorage) obj;
+        return value == other.value;
     }
 }

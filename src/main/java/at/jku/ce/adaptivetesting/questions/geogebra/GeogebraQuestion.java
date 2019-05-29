@@ -20,6 +20,7 @@ public class GeogebraQuestion extends VerticalLayout implements
     private static final long serialVersionUID = 6373936654529246422L;
     private GeogebraDataStorage solution;
     private float difficulty = 0;
+    final GeogebraComponent mycomponent;
     private Label question;
 
     private String id;
@@ -35,11 +36,10 @@ public class GeogebraQuestion extends VerticalLayout implements
         // super(1, 2);
         this.difficulty = difficulty;
         this.id = id;
-        question = new HtmlLabel();
 
         this.solution = solution;
         setSpacing(true);
-        final GeogebraComponent mycomponent = new GeogebraComponent();
+        mycomponent = new GeogebraComponent();
         mycomponent.setValue(questionText);
         mycomponent.setWidth("800");
         mycomponent.setHeight("650");
@@ -47,7 +47,7 @@ public class GeogebraQuestion extends VerticalLayout implements
                 new GeogebraComponent.ValueChangeListener() {
                     @Override
                     public void valueChange() {
-                        Notification.show("Value: " + mycomponent.getValue());
+                        Notification.show("Answer set!: " + mycomponent.getValue());
                     }
                 });
         addComponent(mycomponent);
@@ -92,7 +92,7 @@ public class GeogebraQuestion extends VerticalLayout implements
     }
 
     public void setQuestionText(String questionText) {
-        question.setValue("<div id=\"ggb-element\">" + "</div>");
+        question.setValue(questionText);
     }
 
     public void setDifficulty(float difficulty) {
@@ -106,13 +106,13 @@ public class GeogebraQuestion extends VerticalLayout implements
 
     @Override
     public GeogebraDataStorage getUserAnswer() {
-        return new GeogebraDataStorage();
+        return new GeogebraDataStorage((int) Double.parseDouble(mycomponent.getValue()));
     }
 
     @Override
     public double checkUserAnswer() {
         LogHelper.logInfo("Questionfile: " + id);
-        if ((solution.equals(1) ? 1d : 0d) == 1d) {
+        if (solution.equals(getUserAnswer())) {
             LogHelper.logInfo("Correct answer");
             return 1.0d;
         } else {

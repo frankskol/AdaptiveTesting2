@@ -20,6 +20,6 @@ window.at_jku_ce_adaptivetesting_questions_geogebra_GeogebraComponent =
             //Calls a server-side JS-Function (onClick) that gets handed
             //the exercise fraction of the GeoGebra component
             //through the method getValue()
-            self.onClick(geocomponent.getValue());
+            self.onClick(geocomponent.getValue("correct"));
         };
     };
