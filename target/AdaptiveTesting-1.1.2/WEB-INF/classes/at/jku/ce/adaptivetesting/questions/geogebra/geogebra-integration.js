@@ -8,7 +8,7 @@ geogebraLibrary.GeogebraComponent = function (element) {
     //Variable for the GeoGebra-Exercise
     var ggbExercise = null;
 
-    //Returns the exercise fraction, if the GeoGebra-Applet is an exercise
+    //Returns the exercise fraction
     this.getValue = function () {
             return geoApp.getValue("correct");
     };

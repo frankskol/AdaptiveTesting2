@@ -36,11 +36,12 @@ public class GeogebraQuestion extends VerticalLayout implements
         // super(1, 2);
         this.difficulty = difficulty;
         this.id = id;
-
+        String[] parts = questionText.split("/");
         this.solution = solution;
+        solution.setValue(1);
         setSpacing(true);
         mycomponent = new GeogebraComponent();
-        mycomponent.setValue(questionText);
+        mycomponent.setValue(parts[0]);
         mycomponent.setWidth("800");
         mycomponent.setHeight("650");
         mycomponent.addValueChangeListener(
@@ -50,6 +51,9 @@ public class GeogebraQuestion extends VerticalLayout implements
                         Notification.show("Answer set!: " + mycomponent.getValue());
                     }
                 });
+        question = new HtmlLabel();
+        setQuestionText(parts[1]);
+        addComponent(question);
         addComponent(mycomponent);
         setSpacing(true);
     }
@@ -106,7 +110,13 @@ public class GeogebraQuestion extends VerticalLayout implements
 
     @Override
     public GeogebraDataStorage getUserAnswer() {
-        return new GeogebraDataStorage((int) Double.parseDouble(mycomponent.getValue()));
+        try {
+            return new GeogebraDataStorage((int) Double.parseDouble(mycomponent.getValue()));
+        } catch(java.lang.NumberFormatException e){
+            LogHelper.logInfo("Answer was not submitted!");
+            return new GeogebraDataStorage(0);
+        }
+
     }
 
     @Override

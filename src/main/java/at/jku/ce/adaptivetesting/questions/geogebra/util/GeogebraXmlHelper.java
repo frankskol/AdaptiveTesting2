@@ -5,13 +5,12 @@ package at.jku.ce.adaptivetesting.questions.geogebra.util;
  * or obtain one at http://www.gnu.org/licenses/lgpl-3.0-standalone.html */
 
 
-import at.jku.ce.adaptivetesting.questions.geogebra.GeogebraDataStorage;
 import at.jku.ce.adaptivetesting.questions.geogebra.GeogebraQuestionXml;
 import at.jku.ce.adaptivetesting.questions.geogebra.GeogebraQuestion;
 
 public final class GeogebraXmlHelper {
 	public static GeogebraQuestion fromXml(GeogebraQuestionXml xml, String id) {
-		return new GeogebraQuestion(GeogebraDataStorage.getEmptyDataStorage(), xml.getDifficulty(),
+		return new GeogebraQuestion(xml.getDataStorage(), xml.getDifficulty(),
 				xml.getQuestion().replace("\\n", " <br />"), id);
 
 	}

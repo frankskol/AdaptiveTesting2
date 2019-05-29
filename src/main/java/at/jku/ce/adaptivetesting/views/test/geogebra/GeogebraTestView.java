@@ -117,6 +117,8 @@ public class GeogebraTestView extends TestView {
 	public void quizRules(Component[] components){
 
 		VerticalLayout verticalLayout = new VerticalLayout();
+		Label newSubmitRule = new Label ("<p>Sie müssen zuerst den Submit Button klicken bevor sie auf den Button Nächte Frage klicken!</p>", ContentMode.HTML);
+		addComponent(newSubmitRule);
 
 		Button cont = new Button("Test beginnen", e -> {
 

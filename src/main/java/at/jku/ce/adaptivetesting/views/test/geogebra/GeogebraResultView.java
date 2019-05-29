@@ -48,96 +48,25 @@ public class GeogebraResultView extends VerticalLayout implements View, IResultV
 		//addComponent(HtmlLabel.getCenteredLabel("h2", "Test abgeschlossen"));
 		addComponent(HtmlLabel.getCenteredLabel("Der Test wurde beendet, da "
 				+ (args.outOfQuestions ? "keine weiteren Fragen verfügbar sind."
-						: "dein Kompetenzniveau bestimmt wurde.")));
+				: "dein Kompetenzniveau bestimmt wurde.")));
 
 		addComponent(HtmlLabel
-				.getCenteredLabel("Im Folgenden siehst du die Fragen und die von dir gegebenen Antworten in zeitlich absteigender Reihenfolge.<br>" +
-						"Mit einem Klick auf den Button Ergebnis kannst du Detailinformationen zur jeweiligen Frage anzeigen."));
+				.getCenteredLabel("Im Folgenden siehst du die Fragen und die gegebenen Antworten in zeitlich absteigender Reihenfolge."));
 		addComponent(HtmlLabel
-				.getCenteredLabel("Die Zahl in der ersten Spalte bezieht sich dabei auf deren Schwierigkeitsgrad.<br/>" +
-						"Je größer sie ist, desto höher ist auch die Schwierigkeit der Frage.<br>"));
+				.getCenteredLabel("Die Zahl in der ersten Spalte bezieht sich auf die Schwierigkeit der jeweiligen Frage.<br/>Negative Zahlen stehen für leichtere Fragen, positive Zahlen kennzeichnen schwierigere Fragen."));
 
 		// Create HTML table of the history
 		Table table = new Table();
-		final String showResult = "Ergebnis";
 		table.addContainerProperty("#", Integer.class, null);
 		table.addContainerProperty("Schwierigkeitsgrad", Float.class, null);
 		table.addContainerProperty("Resultat", String.class, null);
-		table.addContainerProperty(showResult, Button.class, null);
 		//List<HistoryEntry> entries = Lists.reverse(args.history);
 		List<HistoryEntry> entries = new ArrayList<HistoryEntry>(args.history);
 		Collections.reverse(entries);
 		int nr = entries.size();
 		for (HistoryEntry entry : entries) {
-			Button resultDetails = null;
-			if (entry.question instanceof Component && entry.question != null) {
-				try {
-					Class<? extends AnswerStorage> dataStorageClass = entry.question.getSolution().getClass();
-					Constructor<? extends IQuestion> constructor = entry.question.getClass().getConstructor(
-							dataStorageClass, dataStorageClass, float.class, String.class, Image.class, String.class);
-
-					Component iQuestionSolution = (Component) constructor.newInstance(
-							entry.question.getSolution(),
-									entry.question.getUserAnswer(),
-									entry.question.getDifficulty(),
-									entry.question.getQuestionText(),
-									null,"");
-
-					SqlQuestion sqlQuestion = (SqlQuestion)entry.question;
-
-					SqlDataStorage userAnswer = sqlQuestion.getUserAnswer();
-					TableWindow userAnswerTableEmbedded = new TableWindow();
-					userAnswerTableEmbedded.drawResultTable(userAnswer.getAnswerQuery());
-
-					SqlDataStorage solution = sqlQuestion.getSolution();
-					TableWindow answerTableEmbedded = new TableWindow();
-					answerTableEmbedded.drawResultTable(solution.getAnswerQuery());
-
-					ClickListener clickListener = event -> {
-						Window window = new Window(showResult);
-						event.getButton().setEnabled(false);
-						window.addCloseListener(e -> event.getButton().setEnabled(true));
-
-						VerticalLayout vLayout = new VerticalLayout();
-						GridLayout gLayout = new GridLayout(3, 2);
-
-						vLayout.setMargin(true);
-						vLayout.addComponent(iQuestionSolution);
-
-						vLayout.addComponent(new HtmlLabel("<b>Anzahl übriger Lösungsversuche: " + userAnswer.getTries() + "</b>"));
-						vLayout.addComponent(new HtmlLabel(""));
-
-						gLayout.addComponent(new HtmlLabel("<b>Dein Query-Ergebnis</b>"),0, 0);
-						gLayout.addComponent(userAnswerTableEmbedded.getgLayout(),0, 1);
-
-						gLayout.addComponent(new HtmlLabel("&ensp;"),1, 0);
-						gLayout.addComponent(new HtmlLabel("&ensp;"),1, 1);
-
-						gLayout.addComponent(new HtmlLabel("<b>Erwartetes Query-Ergebnis</b>"),2, 0);
-						gLayout.addComponent(answerTableEmbedded.getgLayout(),2, 1);
-
-						vLayout.addComponent(gLayout);
-
-						window.setContent(vLayout);
-						window.center();
-						window.setWidth("90%");
-						window.setHeight("80%");
-						if (iQuestionSolution instanceof Sizeable) {
-							Sizeable sizeable = iQuestionSolution;
-							sizeable.setSizeFull();
-						}
-						getUI().addWindow(window);
-					};
-					resultDetails = new Button(showResult, clickListener);
-
-				} catch (Exception e) {
-					LogHelper.logError(e.toString());
-				}
-			}
-
 			table.addItem(new Object[] { new Integer(nr), entry.question.getDifficulty(),
-					isCorrect(entry.points, entry.question.getMaxPoints()),
-					resultDetails }, null);
+					isCorrect(entry.points, entry.question.getMaxPoints())}, null);
 			nr--;
 		}
 		int size = table.size();
@@ -145,7 +74,6 @@ public class GeogebraResultView extends VerticalLayout implements View, IResultV
 			size = 10;
 		}
 		table.setPageLength(size);
-		table.setWidthUndefined();
 		addComponent(table);
 		setComponentAlignment(table, Alignment.MIDDLE_CENTER);
 
@@ -154,10 +82,20 @@ public class GeogebraResultView extends VerticalLayout implements View, IResultV
 		addComponent(HtmlLabel.getCenteredLabel("Delta:  " + args.delta));
 		storeResults(args);
 
-		Image image = new Image("", new FileResource(new File(imageFolder + "datamod_Kompetenzmodell.png")));
+		Image image = new Image("", new FileResource(new File(imageFolder + "accounting_Kompetenzmodell.png")));
 
 		addComponent(image);
 		setComponentAlignment(image, Alignment.MIDDLE_CENTER);
+
+		/*Link link = new Link("Umfrage Adaptive Testing",
+				new ExternalResource("https://docs.google.com/forms/d/e/1FAIpQLSdg0GyIhMymJaLB6hCSkutV41WqJs09qCUSn9DMmSYJ3Lu_Pg/viewform?c=0&w=1"));
+		link.setTargetName("_blank");
+		link.setDescription("Der Fragebogen soll Schwächen der Performance und Usability der Test-Software aufzeigen. " +
+				"Die Auswertung wird zur Verbessung eventueller Schwachstellen herangezogen. " +
+				"Damit die Ergebnisse des Fragebogens denen des Tests zugeordnet werden können, " +
+				"ist es notwendig, den zuvor erstellen anonymen Benutzernamen anzugeben.");
+		addComponent(link);
+		setComponentAlignment(link, Alignment.MIDDLE_CENTER);*/
 	}
 
 	private void storeResults(ResultFiredArgs args) {
@@ -176,10 +114,10 @@ public class GeogebraResultView extends VerticalLayout implements View, IResultV
 			for (HistoryEntry entry : args.history) {
 				writer.write(
 						entry.question.getQuestionText() + ";" +
-						entry.question.getDifficulty() + ";" +
-						entry.question.getSolution().toString() + ";" +
-						entry.question.getUserAnswer().toString() + ";" +
-						isCorrect(entry.points, entry.question.getMaxPoints()) + "\n");
+								entry.question.getDifficulty() + ";" +
+								entry.question.getSolution().toString() + ";" +
+								entry.question.getUserAnswer().toString() + ";" +
+								isCorrect(entry.points, entry.question.getMaxPoints()) + "\n");
 			}
 			writer.close();
 		} catch (Exception var9) {
