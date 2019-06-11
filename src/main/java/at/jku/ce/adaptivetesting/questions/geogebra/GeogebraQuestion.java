@@ -36,23 +36,23 @@ public class GeogebraQuestion extends VerticalLayout implements
         // super(1, 2);
         this.difficulty = difficulty;
         this.id = id;
-        String[] parts = questionText.split("/");
+        // Variable questionText must be structured in the following manner:
+        // The material ID is before "/", the question Text for the label after it.
         this.solution = solution;
         solution.setValue(1);
         setSpacing(true);
         mycomponent = new GeogebraComponent();
-        mycomponent.setValue(parts[0]);
+        mycomponent.setValue(questionText);
         mycomponent.setWidth("800");
         mycomponent.setHeight("650");
         mycomponent.addValueChangeListener(
                 new GeogebraComponent.ValueChangeListener() {
                     @Override
                     public void valueChange() {
-                        Notification.show("Answer set!: " + mycomponent.getValue());
                     }
                 });
         question = new HtmlLabel();
-        setQuestionText(parts[1]);
+        setQuestionText(solution.getPredicate());
         addComponent(question);
         addComponent(mycomponent);
         setSpacing(true);
@@ -110,6 +110,8 @@ public class GeogebraQuestion extends VerticalLayout implements
 
     @Override
     public GeogebraDataStorage getUserAnswer() {
+        //Geogebra Questions must have a boolean Variable component. That variable will be used for checking user input.
+        //If the user does not click on submit, the answer will be counted as wrong.
         try {
             return new GeogebraDataStorage((int) Double.parseDouble(mycomponent.getValue()));
         } catch(java.lang.NumberFormatException e){

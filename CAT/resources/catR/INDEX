@@ -1,7 +1,4 @@
 EPV                     Expected Posterior Variance (EPV)
-GDI                     Global-discrimination index (GDI) and posterior
-                        global-discrimination index (GDIP) for item
-                        selection
 Ii                      Item information functions, first and second
                         derivatives (dichotomous and polytomous models)
 Ji                      Function J(theta) for weighted likelihood
@@ -19,19 +16,12 @@ OIi                     Observed information function (dichotomous and
 Pi                      Item response probabilities, first, second and
                         third derivatives (dichotomous and polytomous
                         models)
-aStratified             Item membership assessment for a-stratified
-                        sampling
 breakBank               Breaking the item bank in item parameters and
                         group membership (for content balancing)
-cat_pav                 Items parameters of the CAT_PAV data set (with
-                        item names)
-checkStopRule           Checking whether the stopping rule is satisfied
 eapEst                  EAP ability estimation (dichotomous and
                         polytomous IRT models)
 eapSem                  Standard error of EAP ability estimation
                         (dichotomous and polytomous IRT models)
-fullDist                Full distribution of ability estimator
-                        (dichotomous models only)
 genDichoMatrix          Item bank generation (dichotomous models)
 genPattern              Random generation of item response patterns
                         under dichotomous and polytomous IRT models

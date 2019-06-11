@@ -1,12 +1,7 @@
-aStratified	aStratified
 breakBank	breakBank
-cat_pav	cat_pav
-checkStopRule	checkStopRule
 eapEst	eapEst
 eapSem	eapSem
 EPV	EPV
-fullDist	fullDist
-GDI	GDI
 genDichoMatrix	genDichoMatrix
 genPattern	genPattern
 genPolyMatrix	genPolyMatrix

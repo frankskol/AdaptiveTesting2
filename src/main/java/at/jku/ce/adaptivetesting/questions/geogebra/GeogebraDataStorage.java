@@ -15,6 +15,13 @@ public class GeogebraDataStorage extends AnswerStorage {
     private static final long serialVersionUID = -8179746363246548456L;
     private int value;
 
+    public String getPredicate() {
+        return predicate;
+    }
+
+    @XmlElement(name = "predicate")
+    private String predicate;
+
     public static GeogebraDataStorage getEmptyDataStorage() {
         GeogebraDataStorage ds = new GeogebraDataStorage(1);
         return ds;
