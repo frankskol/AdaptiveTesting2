@@ -15,6 +15,7 @@ import at.jku.ce.adaptivetesting.core.engine.ICurrentQuestionChangeListener;
 import at.jku.ce.adaptivetesting.core.engine.IEngine;
 import at.jku.ce.adaptivetesting.core.engine.IResultFiredListener;
 import at.jku.ce.adaptivetesting.core.engine.ResultFiredArgs;
+import at.jku.ce.adaptivetesting.questions.geogebra.GeogebraQuestion;
 import at.jku.ce.adaptivetesting.views.html.HtmlLabel;
 
 import at.jku.ce.adaptivetesting.core.engine.StudentData;
@@ -64,10 +65,6 @@ public abstract class TestView extends VerticalLayout implements
 		addComponent(southLayout);
 
 		next = new Button("Nächste Frage");
-		next.addClickListener(e -> {
-			e.getButton().setEnabled(false);
-			displayNextQuestion();
-		});
 
 		// Ensure we have an engine
 		if (engine == null) {
@@ -108,11 +105,30 @@ public abstract class TestView extends VerticalLayout implements
 				if (tries == 0) displayNextQuestion();
 			});
 			commandRow.addComponent(queryDiagnosis);
+			next.addClickListener(e -> {
+				e.getButton().setEnabled(false);
+				displayNextQuestion();
+			});
 			setResultView(DatamodResultView.class);
 		} else if(quizName.equals(TestVariants.RW.toString())) {
+			next.addClickListener(e -> {
+				e.getButton().setEnabled(false);
+				displayNextQuestion();
+			});
 			setResultView(AccountingResultView.class);
 		}
-		else {
+		else if(quizName.equals(TestVariants.GEOGEBRA.toString())) {
+			next.addClickListener(e -> {
+				question = iEngine.getQuestion();
+				GeogebraQuestion geogebraQuestion = (GeogebraQuestion) question;
+				if (geogebraQuestion.getSubmitted()){
+					e.getButton().setEnabled(false);
+					displayNextQuestion();
+				}
+				else{
+					Notification.show("Geogebra Questions need to be submitted");
+				}
+			});
 			setResultView(GeogebraResultView.class);
 		}
 		commandRow.addComponent(next);

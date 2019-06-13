@@ -21,6 +21,7 @@ public class GeogebraQuestion extends VerticalLayout implements
     private GeogebraDataStorage solution;
     private float difficulty = 0;
     final GeogebraComponent mycomponent;
+    private boolean submitted = false;
     private Label question;
 
     private String id;
@@ -49,6 +50,7 @@ public class GeogebraQuestion extends VerticalLayout implements
                 new GeogebraComponent.ValueChangeListener() {
                     @Override
                     public void valueChange() {
+                        submitted = true;
                     }
                 });
         question = new HtmlLabel();
@@ -152,6 +154,10 @@ public class GeogebraQuestion extends VerticalLayout implements
     @Override
     public double getMaxPoints() {
         return 1d;
+    }
+
+    public boolean getSubmitted() {
+        return submitted;
     }
 
 
